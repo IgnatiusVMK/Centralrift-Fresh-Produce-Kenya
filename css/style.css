@@ -747,12 +747,13 @@ ul.email li i {
 
 
 .choose {
-    background: url(../images/chose.jpg);
-    height: 100%;
+    /** background: url(../images/chose.jpg); **/
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(../images/chose.jpg);
+    height: 70%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 90px 0 60px 0;
+    padding: 70px 0 60px 0;
 }
 
 .choose .titlepage h2 {
@@ -1134,3 +1135,20 @@ ul.social_icon li a i:hover {
 .flag-hover:hover {
     transform: scale(2.0); /* Zooms in slightly on hover */
 }
+
+.certs {
+    margin-bottom: 30px;
+    display: flex; /* Enables flexbox */
+    flex-wrap: wrap; /* Wraps images to a new line if space runs out */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between images */
+    text-align: center;
+}
+
+.certs img {
+    max-width: 300px;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
