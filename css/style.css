@@ -1117,3 +1117,20 @@ ul.social_icon li a i:hover {
 }
 
 .about_page .about, .service_page .services, .blog_page .news {padding-bottom: 90px;} 
+
+/** the styling below is for the kenyan (country of origin) flag incorporated into the website**/
+
+.flag-hover {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 90px;
+    height: auto;
+    z-index: 1000; /* Ensures the flag stays above other elements */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.flag-hover:hover {
+    transform: scale(2.0); /* Zooms in slightly on hover */
+}
