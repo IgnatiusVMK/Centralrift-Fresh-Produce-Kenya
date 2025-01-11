@@ -358,28 +358,11 @@ button {
     list-style: none;
     display: flex;
 }
-.site-navbar-index {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-navbar-index ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
 
 .site-navbar ul li a {
     color: #1c1c1b;
-    font-size: 17px;
-    display: block;
-    text-decoration: none;
-}
-.site-navbar-index ul li a {
-    color: #ffffba;
-    font-size: 17px;
+    font-size: 28px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     display: block;
     text-decoration: none;
 }
@@ -391,25 +374,14 @@ button {
 .site-navbar ul li:last-child {
     padding-right: 0;
 }
-.site-navbar-index ul li {
-    padding-right: 55px;
-}
-
-.site-navbar-index ul li:last-child {
-    padding-right: 0;
-}
 
 .site-navbar ul li a:hover {
-    color: #6b7908;
+    font-size: 34px;
+    color: #9baa39;
 }
 .site-navbar ul li a.active {
-    color: #6b7908;
-}
-.site-navbar-index ul li a:hover {
-    color: #ffffba;
-}
-.site-navbar-index ul li a.active {
-    color: #d3dd85;
+    font-size: 32px;
+    color: #9ba748;
 }
 
 /* navbar regular css end */
