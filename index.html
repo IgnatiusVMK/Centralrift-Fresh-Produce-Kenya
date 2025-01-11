@@ -227,48 +227,64 @@
             </div>
             <div class="row">
                <div class="col-md-4">
-               <div class="services_box_main">
-                     <div  class="services_box text_align_left">
-                          <figure><img src="images/farm-photos/service2.jpg" style="height: 300px; width: 500px;" alt="#"/></figure>
-                        <div class="veget">
-                           <h3>FRESH FRUITS<br>& VEGETABLES</h3>
-                           <p>
-                              Our fruits and vegetables are carefully nurtured and naturally farmed to guarantee freshness, flavor, and texture in every produce.
-                           </p>
-                        </div>
-                     </div>
-                     <a class="read_more" href="services">Read More</a>
-                  </div>
+                   <div class="services_box_main">
+                       <div class="services_box text_align_left">
+                           <figure><img src="images/farm-photos/service2.jpg" style="height: 300px; width: 500px;" class="img-fluid" alt="Fresh Fruits and Vegetables"/></figure>
+                           <div class="veget">
+                               <h3>FRESH FRUITS<br>& VEGETABLES</h3>
+                               <p>
+                                   Our fruits and vegetables are carefully nurtured and naturally farmed to guarantee freshness, flavor, and texture in every produce.
+                               </p>
+                           </div>
+                       </div>
+                       <a class="read_more" href="services">Read More</a>
+                   </div>
                </div>
+           
                <div class="col-md-4">
-               <div class="services_box_main">
-                     <div  class="services_box text_align_left">
-                          <figure><img src="images/farm-photos/herbs-stock2.jpg" style="height: 300px; width: 500px;" alt="#"/></figure>
-                        <div class="veget">
-                           <h3>ORGANIC<br>Herbs</h3>
-                           <p>
-                              We are proud of our wide assortment of fragrant, fresh herbs. Strong tastes and fragrances are produced by cultivating each herb to preserve its inherent oils.
-                           </p>
-                        </div>
-                     </div>
-                     <a class="read_more" href="services">Read More</a>
-                  </div>
+                   <div class="services_box_main">
+                       <div class="gallery-container">
+                           <div class="services_box text_align_left gallery">
+                               <figure>
+                                   <img src="images/farm-photos/herbs-stock2.jpg" style="height: 300px; width: 500px;" class="img-fluid gallery-img initial" alt="Herbs"/>
+                               </figure>
+                               <div class="veget">
+                                   <h3>ORGANIC<br>Herbs</h3>
+                                   <p>
+                                       We are proud of our wide assortment of fragrant, fresh herbs. Strong tastes and fragrances are produced by cultivating each herb to preserve its inherent oils.
+                                   </p>
+                               </div>
+                           </div>
+                           <a class="read_more" href="services">Read More</a>
+           
+                           <!-- Hidden gallery container -->
+                           <div id="galleryOverlay" class="gallery-overlay">
+                               <div class="gallery-content">
+                                   <img src="images/farm-photos/herbs-stock.jpg" alt="Herbs 2"/>
+                                   <img src="images/farm-photos/herbs-stock2.jpg" alt="Herbs 3"/>
+                               </div>
+                               <span class="close-gallery">&times;</span>
+                           </div>
+                       </div>   
+                   </div>
                </div>
+           
                <div class="col-md-4">
-                  <div class="services_box_main">
-                     <div  class="services_box text_align_left">
-                          <figure><img src="images/farm-photos/eggs-stock-img.jpg" style="height: 300px; width: 500px;" alt="#"/></figure>
-                        <div class="veget">
-                           <h3>EGGS</h3>
-                           <p>
-                              Our poultry farming offers farm-fresh eggs in hygienic, well-managed indoor environments.
-                           </p>
-                        </div>
-                     </div>
-                     <a class="read_more" href="services">Read More</a>
-                  </div>
+                   <div class="services_box_main">
+                       <div class="services_box text_align_left">
+                           <figure><img src="images/farm-photos/eggs-stock-img.jpg" style="height: 300px; width: 500px;" class="img-fluid" alt="Farm Fresh Eggs"/></figure>
+                           <div class="veget">
+                               <h3>EGGS</h3>
+                               <p>
+                                   Our poultry farming offers farm-fresh eggs in hygienic, well-managed indoor environments.
+                               </p>
+                           </div>
+                       </div>
+                       <a class="read_more" href="services">Read More</a>
+                   </div>
                </div>
             </div>
+           
          </div>
       </div><br>
       <!-- end services -->
@@ -477,6 +493,19 @@
          </div>
       </footer>
       <!-- end footer -->
+       <script>
+         // Show gallery overlay when clicking on the image
+         document.querySelectorAll('.gallery-img').forEach(image => {
+            image.addEventListener('click', function() {
+               document.getElementById('galleryOverlay').style.display = 'flex';
+            });
+         });
+
+         // Hide gallery overlay when clicking the close button
+         document.querySelector('.close-gallery').addEventListener('click', function() {
+            document.getElementById('galleryOverlay').style.display = 'none';
+         });
+       </script>
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>

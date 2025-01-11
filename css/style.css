@@ -612,8 +612,8 @@ ul.email li i {
     padding: 40px;
     border-radius: 5px 5px 0 0;
     margin-top: -5px;
-    position: relative;
-    z-index: 99999;
+    /* position: relative; */
+    /* z-index: 99999; */
     background: #fff;
 }
 
@@ -622,7 +622,7 @@ ul.email li i {
     font-size: 30px;
     line-height: 35px;
     font-weight: bold;
-       padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .services_box_main .read_more {
@@ -1124,3 +1124,41 @@ ul.social_icon li a i:hover {
     border-radius: 10px; /* Optional: adds rounded corners */
 }
 
+/* Ensuring images are responsive */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gallery overlay */
+.gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Gallery content inside the overlay */
+.gallery-content img {
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;  /* Limit the height */
+    margin: 20px;
+}
+
+/* Close button style */
+.close-gallery {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
