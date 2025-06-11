@@ -481,37 +481,63 @@ ul.email li i {
      height: 100%;
      width: 100%;
 }
+/* Default desktop styling */
 #banner1 .carousel-item img {
-    width: 100%; 
+    width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+    #banner1 .carousel-item img {
+        height: 50vh; /* Let the image adjust to its natural height */
+        max-height: 75vh; /* Optional: limit height for usability */
+    }
+}
+
 .willom {
     display: flex;
     margin-top: -85px;
 }
 .willom h1 {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 50px;
     color: #fff;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
     background: #6b7908;
     display: inline-block;
-    padding: 46px 46px;
-    border-radius: 30px;
+    padding: 30px 30px;
+    border-radius: 40px;
 }
+@media (max-width: 768px) {
+    .willom h1 {
+        font-size: 20px;
+        line-height: 25px;
+        padding: 5px 5px;
+        border-radius: 25px;
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        box-sizing: border-box;
+        word-break: break-word; /* Prevent long words from breaking layout */
+    }
+}
+
+
 .slider_main .carousel-indicators {
      display: none;
 }
 
 #banner1 .carousel-control-prev,
 #banner1 .carousel-control-next {
-     width: 103px;
-     height: 103px;
+     width: 35px;
+     height: 35px;
      background-color: #ffffffc4;
      color: #000000;
-     font-size: 60px;
+     font-size: 20px;
      opacity: 1;
      top: 50%;
     
@@ -545,15 +571,85 @@ ul.email li i {
     padding-top: 90px;
 }
 
+/*  .about_img_wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+} */
 
-.about_img figure {
-    margin: 0;
+ /* .main-img {
+    width: 40vw;
+    height: 70vh;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+} */
+
+/* .small-float-img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 250px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+} */
+
+.about_img_wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%; /* ensure defined height */
+    min-height: 400px; /* fallback for video display */
 }
 
+.main-video {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: inherit;
+}
 
-.about_img figure img {
-    transition: ease-in all 0.5s; 
-    border-radius: 5px;
+/* Floating image in bottom right */
+.small-float-img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 30%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.small-float-img:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .main-video {
+        width: 80vw;
+        height: 100%;
+        object-fit: cover;
+    }
+    .about_img_wrapper {
+        min-height: 300px;
+    }
+
+    .small-float-img {
+        width: 40%;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .small-float-img:hover {
+        transform: scale(1.3);
+    }
 }
 
 .about .titlepage {
@@ -570,11 +666,6 @@ ul.email li i {
 
 .about .read_more {
     margin-top: 35px;
-}
-
-.about_img figure img:hover {
-    box-shadow: 0 0 16px 3px #635d5d38;
-    transition: ease-in all 0.5s;
 }
 
 
@@ -1091,7 +1182,9 @@ ul.social_icon li a i:hover {
 
 .about_page .about, .service_page .services, .blog_page .news {padding-bottom: 90px;} 
 
-/** the styling below is for the kenyan (country of origin) flag incorporated into the website**/
+/* =================================================================== */
+                /** Kenyan (country of origin) flag **/
+/* =================================================================== */
 
 .flag-hover {
     position: fixed;
@@ -1104,10 +1197,23 @@ ul.social_icon li a i:hover {
     transition: transform 0.3s ease;
 }
 
-.flag-hover:hover {
-    transform: scale(2.0); /* Zooms in slightly on hover */
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+    .flag-hover {
+        bottom: 15px;
+        right: 10px;
+        width: 100px; /* Smaller width for mobile */
+        transform: scale(0.95); /* scale down slightly */
+    }
 }
 
+.flag-hover:hover {
+    transform: scale(2.0); /* Zoom-in during mouse hover */
+}
+
+/* =================================================================== */
+                /** Certifications **/
+/* =================================================================== */
 .certs {
     margin-bottom: 30px;
     display: flex; /* Enables flexbox */
