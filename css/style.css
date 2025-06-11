@@ -1382,3 +1382,103 @@ ul.social_icon li a i:hover {
     height: 200px; /* Adjust image height to prevent stretching */
   }
 }
+
+/* =================================================================== */
+/** Contact US Section **/
+/* =================================================================== */
+
+
+
+.farm-contact-section {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #333;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2e3d00;
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #4d4d4d;
+  margin-bottom: 30px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* For larger screens, force both to take up equal space */
+@media (min-width: 768px) {
+  .contact-cards > .col-md-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+.info-card i {
+  color: #77be47;
+  margin-right: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.info-card h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.info-card p{
+    color: #e0f8d8;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-card textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3e8e41;
+}

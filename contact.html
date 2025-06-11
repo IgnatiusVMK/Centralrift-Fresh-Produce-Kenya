@@ -15,7 +15,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site -->
-      <title>About Centralrift Kenya</title>
+      <title>Contact Us - Centralrift Kenya</title>
       <meta name="keywords" content="Fresh Produce, Herbs, Vegetables">
       <meta name="description" content="Centralrift Fresh Produce Kenya">
       <meta name="author" content="">
@@ -87,47 +87,79 @@
          </header>
          <!-- end header inner -->
       </div>
-      <!-- contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="titlepage text_align_center">
-                     <span>Our Contact</span>
-                     <h2>Request A Call Back</h2>
-                  </div>
+
+      <!-- ===================== Contact Us Section ===================== -->
+
+      <div class="farm-contact-section">
+      <div class="container">
+         <div class="row contact-cards">
+            <!-- Contact Information Card -->
+            <div class="col-md-6">
+               <div class="contact-header text_align_center">
+                  <h2>We're Here to Help</h2>
+                  <p>Reach out to us for your farm-related inquiries.</p>
                </div>
-               <div class="col-md-8 offset-md-2">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="form_control" placeholder="Your Name" type="type" name=" Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="form_control" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                          <div class="col-md-12">
-                           <input class="form_control" placeholder="Your Email" type="type" name="Email">                          
-                        </div>
-                        <div class="col-md-12">
-                           <input class="textarea" placeholder="Message" type="type" name="message"> 
-                        </div>
-                        <div class="col-md-12">
-                           <div class="group_btn">
-                           <button class="send_btn">Send</button>
-                            <button class="send_btn">location</button>
-                         </div>
-                        </div>
-                     </div>
-                  </form>
+            <div class="contact-card info-card" style="background-image: url('images/green-farm-bg.jpg');">
+               <h3>Contact Information</h3>
+               <p><i class="fa fa-map-marker"></i> Centralrift Fresh Produce K. LTD, Kajiado County</p>
+               <p><i class="fa fa-phone"></i> 0733 506881 / 0722 491615</p>
+               <p><i class="fa fa-envelope"></i> sales@centralriftfpkl.com </p>
+               <p><i class="fa fa-envelope"></i> info@centralriftfpkl.com </p>
+            </div>
+            </div>
+            <!-- Contact Form Card -->
+            <div class="col-md-6">
+            <div class="contact-card form-card">
+               <h3>Get a Free Quotation</h3>
+               <form>
+                  <div class="form-group">
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                  <select required>
+                     <option value="">Select a Service</option>
+                     <option>Crop Consultation</option>
+                     <option>Bulk Orders</option>
+                     <option>Farm Visits</option>
+                  </select>
+                  </div>
+                  <div class="form-group">
+                  <textarea placeholder="Message (optional)"></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Submit Request</button>
+               </form>
+            </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- ===================== Contact Us Section ===================== -->
+
+      <div class="choose">
+         <div class="container">
+            <h2 class="text-center mb-4 text-white">Why Choose Us</h2>
+            <div class="choose-slider">
+               <div class="choose-item text_align_center">
+                  <h3>100%</h3>
+                  <span>Organic <br>Practices</span>
+               </div>
+               <div class="choose-item text_align_center">
+                  <h3>+</h3>
+                  <span>Happy Retail <br>Partners</span>
+               </div>
+               <div class="choose-item text_align_center">
+                  <h3>24-Hr</h3>
+                  <span>Fresh Harvest <br>Turnaround</span>
+               </div>
+               <div class="choose-item text_align_center">
+                  <h3>Eco-Friendly</h3>
+                  <span>Farming & <br>Packaging</span>
                </div>
             </div>
          </div>
-          <div class="map-responsive">
-            <iframe src="" width="600" height="430" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-         </div>
       </div>
-      <!-- end contact -->
+      <!-- End Why Choose US Section -->
 
       <!--kenyan-flag section-->
       <img src="images/kenyan-flag-unscreen.gif" alt="Kenyan Flag" class="flag-hover">
@@ -159,15 +191,6 @@
                               </ul>
                            </div>
                         </div>
-                        <!-- <div class="col-lg-3 col-md-6">
-                           <div class="hedingh3 text_align_left">
-                              <h3>Recent Posts</h3>
-                              <ul class="recent">
-                                 <li><img src="images/resent.jpg" alt="#"/>ea commodo consequat. Duis aute </li>
-                                 <li><img src="images/resent.jpg" alt="#"/>ea commodo consequat. Duis aute </li>
-                              </ul>
-                           </div>
-                        </div> -->
                          <div class="col-lg-3 col-md-6">
                            <div class="hedingh3  flot_right text_align_left">
                               <h3>Contact</h3>
@@ -211,5 +234,66 @@
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/bootstrap-datepicker.min.js"></script>
       <script src="js/custom.js"></script>
+
+      <!-- ========== Product Catalogue ============= -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.slider-track');
+            const items = document.querySelectorAll('.slider-item');
+            let index = 0;
+
+            function getVisibleItemsCount() {
+               return window.innerWidth <= 768 ? 3 : 5;
+            }
+
+            function updateSlider() {
+               const visibleItems = getVisibleItemsCount();
+               const offset = index * (100 / visibleItems);
+               track.style.transform = `translateX(-${offset}%)`;
+
+               // Remove all active classes
+               items.forEach(item => item.classList.remove('active'));
+
+               // Highlight center item
+               const centerIndex = index + Math.floor(visibleItems / 2);
+               if (centerIndex < items.length) {
+               items[centerIndex].classList.add('active');
+               }
+            }
+
+            setInterval(() => {
+               const visibleItems = getVisibleItemsCount();
+               index++;
+               if (index > items.length - visibleItems) {
+               index = 0;
+               }
+               updateSlider();
+            }, 3000);
+
+            // Recalculate on resize
+            window.addEventListener('resize', updateSlider);
+
+            updateSlider(); // initial
+         });
+      </script>
+
+      <!-- ============= Why Choose Us Mobile View ================ -->
+       <script>
+         document.addEventListener('DOMContentLoaded', () => {
+         const slider = document.querySelector('.choose-slider');
+         if (window.innerWidth <= 768 && slider) {
+            let scrollAmount = 0;
+            const slideWidth = slider.querySelector('.choose-item').offsetWidth + 10; // width + margin
+
+            setInterval(() => {
+               scrollAmount += slideWidth;
+               if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+               scrollAmount = 0;
+               }
+               slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+            }, 3000);
+         }
+         });
+      </script>
    </body>
 </html>
