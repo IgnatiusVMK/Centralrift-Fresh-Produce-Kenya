@@ -1199,46 +1199,97 @@ ul.social_icon li a i:hover {
 
 
 /* =================================================================== */
-                /** Why Choose US Section **/
+/** Why Choose US Section **/
 /* =================================================================== */
 .choose {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(../images/green-farm-bg.jpg);
-    height: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 70px 0 60px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(../images/green-farm-bg.jpg);
+  height: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 70px 0 60px 0;
 }
 
 .choose .titlepage h2 {
-    color: #fff;
-}
-.point {margin-bottom: 30px;}
-.point h3 {
-    max-width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #fff;
-    border: #cfd8b7 solid 18px;
-    font-size: 37px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #6b7908;
+  color: #fff;
 }
 
-.point span {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 22px;
-    padding-top: 28px;
-    display: block;
+/* Choose Slider Container */
+.choose-slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
+.choose-item {
+  flex: 1 1 22%;
+  /* background: rgba(255, 255, 255, 0.95); */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Reusing existing .point styles inside new structure */
+.choose-item h3 {
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff;
+  border: #cfd8b7 solid 18px;
+  font-size: 37px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #6b7908;
+}
+
+.choose-item span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding-top: 28px;
+  display: block;
+}
+
+/* Legacy support for .point if still used */
+.point {
+  margin-bottom: 30px;
+}
+
+/* MOBILE VIEW: horizontal scroll for slider */
+@media (max-width: 768px) {
+  .choose-slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  .choose-item {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    margin-right: 10px;
+  }
+
+  .choose-item span {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .choose-item h3 {
+    width: 150px;
+    height: 150px;
+    font-size: 32px;
+    border-width: 14px;
+  }
+}
+
 
 
 /* ========== Product Catalogue Styles ========== */
@@ -1246,6 +1297,18 @@ ul.social_icon li a i:hover {
 #productShowcase {
   overflow: hidden;
   padding: 50px;
+}
+
+#productShowcase h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+#productShowcase p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 .slider-container {
@@ -1302,4 +1365,20 @@ ul.social_icon li a i:hover {
 .slider-item.active img {
   transform: scale(1.1);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  /* Smaller section padding for mobile */
+  #productShowcase {
+    padding: 30px 20px;
+  }
+
+  .slider-item {
+    flex: 0 0 33.33%; /* Show 3 items per row */
+    padding: 0 5px;
+  }
+
+  .slider-item img {
+    height: 200px; /* Adjust image height to prevent stretching */
+  }
 }
